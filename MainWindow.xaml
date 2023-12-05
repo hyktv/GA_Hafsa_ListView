@@ -1,0 +1,22 @@
+﻿<Window x:Class="GA_Hafsa_ListView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GA_Hafsa_ListView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <ListView x:Name="lvDisplayList" Height="356" Width="616" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="92" Canvas.Top="39">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="First Name" Width="100" DisplayMemberBinding="{Binding FirstName}"/>
+                    <GridViewColumn Header="Last Name" Width="100" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn Header="ID" Width="100" DisplayMemberBinding="{Binding IdNumber}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+    </Canvas>
+</Window>
