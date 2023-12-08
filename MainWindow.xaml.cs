@@ -20,12 +20,11 @@ namespace GA_Hafsa_ListView
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Student> students = new List<Student>();
 
-
-    public MainWindow()
+        public MainWindow()
     {
             InitializeComponent();
-            List<Student> students = new List<Student>();
 
             // Create a student
             // Assign an id number
@@ -48,12 +47,18 @@ namespace GA_Hafsa_ListView
 
             lvDisplayList.ItemsSource = students;
             lvDisplayList.SelectedIndex = 0;
-
+            
         }
 
         private void lvDisplayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            MessageBox.Show($"Full Name: {});
+            int selectedIndex = lvDisplayList.SelectedIndex;
+            Student selectedStudent = students[selectedIndex];
+
+            string firstName = selectedStudent.FirstName;
+            string lastName = selectedStudent.LastName;
+
+            MessageBox.Show($"Full Name: {firstName + " " + lastName}");
             
         }
     }
