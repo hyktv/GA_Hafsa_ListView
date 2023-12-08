@@ -53,7 +53,8 @@ namespace GA_Hafsa_ListView
 
         private void lvDisplayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            MessageBox.Show($"Full Name:");
+            MessageBox.Show($"Full Name: {});
+            
         }
     }
 }
