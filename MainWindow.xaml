@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
-        <ListView x:Name="lvDisplayList" Height="356" Width="616" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="92" Canvas.Top="39">
+        <ListView x:Name="lvDisplayList" Height="356" Width="616" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="92" Canvas.Top="39" SelectionChanged="lvDisplayList_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="First Name" Width="100" DisplayMemberBinding="{Binding FirstName}"/>

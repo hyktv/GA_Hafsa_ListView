@@ -47,7 +47,13 @@ namespace GA_Hafsa_ListView
             //students.Add("");
 
             lvDisplayList.ItemsSource = students;
+            lvDisplayList.SelectedIndex = 0;
 
+        }
+
+        private void lvDisplayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MessageBox.Show($"Full Name:");
         }
     }
 }
